@@ -89,9 +89,9 @@ const DisplayTable = () => {
     <>
         <table>
             <tr>
-                <th> Location </th>
-                <th> Flow Rate </th>
-                <th> Water Depth </th>
+                <th> <strong>Location</strong> </th>
+                <th> <strong>Flow Rate</strong> </th>
+                <th> <strong>Water Depth</strong> </th>
             </tr>
             <tr>
                 <td> Lost Creek </td>
@@ -104,7 +104,7 @@ const DisplayTable = () => {
                 <td> {threeSixtyWaterDepth} feet </td>
             </tr>
             <tr>
-                <td> Above Barton Creek </td>
+                <td> Above Barton Springs </td>
                 <td> {aboveBartonFlowRate} cfps </td>
                 <td> {aboveWaterDepth} feet </td>
             </tr>

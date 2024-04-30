@@ -1,20 +1,44 @@
  body {
   background-color: #F5cdb5;;
+  box-sizing: border-box;
  }
 
  header {
   padding-left: 4rem;
   border: 4px solid #02a58d;
+  border-radius: 10px;
   color: #beb4be;
   background-color: #055b67;
-
+  font-family: "Jersey 25";
+  font-size: larger;
  }
+
+ .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+ #headerTitle {
+    line-height: 5em;
+ }
+
+#headerWeather {
+  margin-right: 2em;
+  text-align: right;
+  line-height: .5em;
+}
+
+#headerWeather img {
+  font-size: smaller;
+}
  
  table {
   border: 5px solid #02a58d;
+  border-radius: 10px;
   color: #beb4be;
   margin: 0 auto;
-  margin-top: 11rem;
+  margin-top: 6rem;
   background-color: #055b67;
  }
  
@@ -22,4 +46,8 @@
   border:1px solid #99ACC1;
   padding: .7em;
   text-align: center;
+}
+
+th {
+  font-size: larger ;
 }
