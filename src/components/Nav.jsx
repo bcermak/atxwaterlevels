@@ -12,7 +12,7 @@ const Nav = () => {
         .then((res) => res.json())
         .then((res) => {
             console.log(res)
-            const currentTemp = res.main.temp;
+            const currentTemp = parseInt(res.main.temp);
             setCurrentTemp(currentTemp);
             const cloudiness = res.clouds.all.toString();
             setCloudPercent(cloudiness);
