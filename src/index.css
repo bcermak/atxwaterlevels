@@ -1,8 +1,25 @@
+ body {
+  background-color: #F5cdb5;;
+ }
+
+ header {
+  padding-left: 4rem;
+  border: 4px solid #02a58d;
+  color: #beb4be;
+  background-color: #055b67;
+
+ }
+ 
  table {
-  border: 2px solid black;
+  border: 5px solid #02a58d;
+  color: #beb4be;
+  margin: 0 auto;
+  margin-top: 11rem;
+  background-color: #055b67;
  }
  
  th , td {
-  border:1px solid black;
+  border:1px solid #99ACC1;
   padding: .7em;
+  text-align: center;
 }
