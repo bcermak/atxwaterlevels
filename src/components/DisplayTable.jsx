@@ -1,4 +1,3 @@
-import { connect } from "mongoose";
 import { useEffect, useState } from "react";
 
 const DisplayTable = () => {
