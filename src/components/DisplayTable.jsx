@@ -29,9 +29,7 @@ const DisplayTable = () => {
             const flowRate = flowData.values[0].value[0].value;
             setLcFlowRate(flowRate);
             const waterDepth = heightData.values[0].value[0].value;
-            setLcWaterDepth(waterDepth);
-
-            
+            setLcWaterDepth(waterDepth);     
         }).then(() => {
             const currentTime = new Date(Date.now())
             const formatTime = currentTime.toLocaleString()
