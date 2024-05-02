@@ -11,6 +11,7 @@ const DisplayTable = () => {
     const [aboveWaterDepth, setAboveBartonWaterDepth] = useState(0);
     const [bartonSpringsFlowRate, setBartonSpringsFlowRate] = useState(0);
     const [bartonSpringsWaterDepth, setBartonSpringsWaterDepth] = useState(0);
+    const [updatedAt, setUpdatedAt] = useState("");
 
 
 
@@ -28,8 +29,15 @@ const DisplayTable = () => {
             const flowRate = flowData.values[0].value[0].value;
             setLcFlowRate(flowRate);
             const waterDepth = heightData.values[0].value[0].value;
-            setLcWaterDepth(waterDepth)
-        })
+            setLcWaterDepth(waterDepth);
+
+            
+        }).then(() => {
+            const currentTime = new Date(Date.now())
+            const formatTime = currentTime.toLocaleString()
+            setUpdatedAt(formatTime)
+    })
+      
         )
     }, [])
 
@@ -48,9 +56,9 @@ const DisplayTable = () => {
             setThreeSixtyWaterDepth(waterDepth)
         })
         )
-    }, [])
+    }, []);
 
-    useEffect(() => {
+        useEffect(() => {
         fetch('https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08155400&siteStatus=all')
         .then((res) => res.json()
         .then((json) => {
@@ -65,9 +73,9 @@ const DisplayTable = () => {
             setAboveBartonWaterDepth(waterDepth)
         })
         )
-    }, [])
+    }, []);
 
-    useEffect(() => {
+        useEffect(() => {
         fetch('https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08155500&siteStatus=all')
         .then((res) => res.json()
         .then((json) => {
@@ -82,11 +90,12 @@ const DisplayTable = () => {
             setBartonSpringsWaterDepth(waterDepth)
         })
         )
-    }, [])
+    }, []);
 
   return (
     <>
         <table>
+            <caption> Last Updated: {updatedAt}</caption>
             <tr>
                 <th> <strong>Location</strong> </th>
                 <th> <strong>Flow Rate</strong> </th>

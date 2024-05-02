@@ -41,6 +41,11 @@
   margin-top: 6rem;
   background-color: #055b67;
  }
+
+ table caption {
+  color: darkslategray;
+  margin-bottom: .2em;
+ }
  
  th , td {
   border:1px solid #99ACC1;
